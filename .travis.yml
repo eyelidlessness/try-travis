@@ -1,3 +1,5 @@
+sudo: false
+
 language: clojure
 lein: lein
 script: lein spec -f junit
@@ -15,6 +17,7 @@ deploy:
     env: Default-Environment
     bucket_name: elasticbeanstalk-us-west-2-350775868452
     bucket_path: $TRAVIS_JOB_ID.zip
+    zip_file: $TRAVIS_JOB_ID.zip
     on:
-        repo: try-travis
+        repo: eyelidlessness/try-travis
         branch: develop

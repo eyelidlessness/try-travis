@@ -16,7 +16,9 @@
              :content "width=device-width, initial-scale=1"}]
      (include-css "/css/site.css")]
     [:body
-     [:div#app "I am a banana"]
+     [:div#app
+       [:p "I am a banana"]
+       [:p "This was built on TravisCI"]]
      (include-js "/js/built.js")
      (include-js "/js/app.js")]]))
 
