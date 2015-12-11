@@ -1,5 +1,5 @@
-(require '[try-circle.handler :refer [loading-page]]
-         '[try-circle.shell :as shell])
+(require '[try-travis.handler :refer [loading-page]]
+         '[try-travis.shell :as shell])
 
 ;; Run CLJSBuild
 (println "Building…")

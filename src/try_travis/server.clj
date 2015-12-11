@@ -1,6 +1,6 @@
-(ns try-circle.server
+(ns try-travis.server
   (:require [ring.adapter.jetty :refer [run-jetty]]
-            [try-circle.handler :refer [app]])
+            [try-travis.handler :refer [app]])
   (:gen-class))
 
 (defn -main [& args]

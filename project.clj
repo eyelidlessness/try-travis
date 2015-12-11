@@ -1,6 +1,6 @@
-(defproject try-circle "0.1.0-SNAPSHOT"
-  :description "Try Circle"
-  :url "https://github.com/eyelidlessness/try-circle"
+(defproject try-travis "0.1.0-SNAPSHOT"
+  :description "Try Travis"
+  :url "https://github.com/eyelidlessness/try-travis"
 
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/clojurescript "1.7.170" :scope "provided"]
@@ -19,7 +19,7 @@
   :plugins [[lein-cljsbuild "1.1.1"]
             [speclj "3.3.1"]]
 
-  :main try-circle.server
+  :main try-travis.server
 
   :clean-targets ^{:protect false} [:target-path
                                     [:cljsbuild :builds :app :compiler :output-dir]
@@ -36,14 +36,14 @@
                                         :output-dir "target/cljsbuild/public/js/out"
                                         :asset-path   "/js/out"
                                         :optimizations :none
-                                        :main "try-circle.wat"}}
+                                        :main "try-travis.wat"}}
                        :build {:source-paths ["src"]
                                :compiler {:output-to "resources/public/js/built.js"
                                           :output-dir "resources/public/js/out"
                                           :asset-path   "/js/out"
                                           :optimizations :whitespace
                                           :pretty-print false
-                                          :main "try-circle.wat"}}}}
+                                          :main "try-travis.wat"}}}}
 
   :profiles {:uberjar {:prep-tasks ["compile" ["cljsbuild" "once"]]
                        :aot :all

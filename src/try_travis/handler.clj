@@ -1,4 +1,4 @@
-(ns try-circle.handler
+(ns try-travis.handler
   (:require [compojure.core :refer [GET defroutes]]
             [compojure.route :refer [not-found resources]]
             [hiccup.core :refer [html]]

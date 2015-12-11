@@ -2,7 +2,7 @@
 
 SHA1=$1
 
-IMAGE=eyelidlessness/try-circle
+IMAGE=eyelidlessness/try-travis
 
 DOCKERRUN_FILE=$SHA1-Dockerrun.aws.json
 EB_BUCKET=elasticbeanstalk-us-west-2-350775868452

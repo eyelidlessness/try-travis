@@ -1,4 +1,4 @@
-(ns try-circle.wat)
+(ns try-travis.wat)
 
 (defn wat? [wat]
   (js/console.log "Wat?" wat))

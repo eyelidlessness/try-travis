@@ -1,7 +1,7 @@
-(ns try-circle.core-test
+(ns try-travis.core-test
   (:use speclj.core))
 
-(describe "That I can run Speclj examples on Circle"
+(describe "That I can run Speclj examples on Travis"
   (it "equals"
     (should= 0 0))
 

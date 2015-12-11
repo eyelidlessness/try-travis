@@ -1,5 +1,5 @@
 ;; Based on http://stackoverflow.com/a/16627950/17964
-(ns try-circle.shell)
+(ns try-travis.shell)
 
 (defn- print-stream
   [stream]
