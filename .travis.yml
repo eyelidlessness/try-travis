@@ -1,3 +1,20 @@
 language: clojure
 lein: lein
 script: lein spec -f junit
+
+after_success:
+    - lein run -m clojure.main scripts/build_static.clj
+    - zip -r $TRAVIS_JOB_ID.zip resources Dockerfile docker
+
+deploy:
+    provider: elasticbeanstalk
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+    region: us-west-2
+    app: My First Elastic Beanstalk Application
+    env: Default-Environment
+    bucket_name: elasticbeanstalk-us-west-2-350775868452
+    bucket_path: $TRAVIS_JOB_ID.zip
+    on:
+        repo: try-travis
+        branch: develop
